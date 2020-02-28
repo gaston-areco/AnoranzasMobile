@@ -1,0 +1,7 @@
+{
+  "name": "anoranzas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

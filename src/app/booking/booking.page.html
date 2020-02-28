@@ -1,0 +1,65 @@
+<div class="modal-dialog modal-dialog-scrollable" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel" style="margin-top: 0;">Reserva</h2>
+    </div>
+    <div class="modal-body">
+      <form id="bookingForm" action="https://anoranzas-chaquenas.000webhostapp.com/bookingAPI.php" method="post" role="form" class="contactForm">
+          <div class="form-group">
+              <input id="user" type='text' name='name' class='form-control' placeholder='Su Nombre' pattern="[a-zA-Z0-9_\-.]{3,}"/>
+              <p id="userError" class="error">Debe ingresar al menos 3 caracteres</p>
+          </div>
+          <div class="form-group">
+              <input id="email" type='email' class='form-control' name='email' placeholder='Su Email' pattern="[a-zA-Z0-9._/-]{3,16}@(yahoo|hotmail|gmail){1}.com"/>
+              <p id="emailError" class="error">Debe ingresar un email en formato válido</p>
+          </div>
+          <div class="form-group">
+              <p>Fecha Ingreso</p>
+              <input id="arriveDate" type="date" class="form-control" name="checkin" placeholder="Fecha de Ingreso" onkeypress="return false"/>
+          </div>
+          <div class="form-group">
+              <p>Fecha Salida</p>
+              <input id="departureDate" type="date" class="form-control" name="checkout" placeholder="Fecha de Salida" onkeypress="return false"/>
+          </div>
+          <div class="form-group">
+              <p>Tipo de Habitación</p>
+              <select id="roomType" class="form-control">
+                  <option value="Doble">Doble</option>
+                  <option value="Triple">Triple</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <div class="row d-flex justify-content-center">
+              <div id="room1" class="booking-image" style="background-image: url('assets/img/habitaciones/doble/galeria-rooms-crt-1.jpg');"></div>
+              <div id="room2" class="booking-image" style="background-image: url('assets/img/habitaciones/doble/galeria-rooms-crt-2.jpg');"></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div id="room3" class="booking-image" style="background-image: url('assets/img/habitaciones/doble/galeria-rooms-crt-3.jpg');"></div>
+              <div id="room4" class="booking-image" style="background-image: url('assets/img/habitaciones/doble/galeria-rooms-crt-4.jpg');"></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div id="room5" class="booking-image" style="background-image: url('assets/img/habitaciones/doble/galeria-rooms-crt-5.jpg');"></div>
+              <div id="room6" class="booking-image" style="background-image: url('assets/img/habitaciones/doble/galeria-rooms-crt-6.jpg');"></div>
+            </div>
+          </div>
+          <div class="form-group">
+              <p>Tarjeta de Crédito</p>
+              <input id="cardNumber" type="text" class="form-control" name="cardNumber" placeholder="Número de Tarjeta" pattern="[0-9]{18}"/>
+              <p id="cardNumberError" class="error">Debe ingresar los 18 números de la tarjeta</p>
+          </div>
+          <div class="form-group">
+              <input id="cardOwner" type="text" class="form-control" name="cardOwner" placeholder="Titular de Tarjeta" pattern="[a-zA-Z ]{6,}"/>
+              <p id="cardOwnerError" class="error">Debe ingresar al menos 6 caracteres</p>
+          </div>
+          <div class="form-group">
+              <input id="cardDate" type="text" class="form-control" name="cardDate" placeholder="Vencimiento de Tarjeta" pattern="((0[1-9]|1[0-2])\/[2-9][0-9])|((1[1-2])\/19)"/>
+              <p id="cardDateError" class="error">Debe ingresar una fecha válida en formato mm/yy</p>
+          </div>
+      </form>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+      <button id="payLater" type="submit" class="btn btn-outline-success" disabled>Pagar Después</button>
+      <button id="payNow" type="submit" class="btn btn-success" disabled>Pagar Ahora</button>
+    </div>
+  </div>
+</div>

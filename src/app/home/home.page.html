@@ -1,0 +1,24 @@
+<div class="login-background">
+  <div class="login-page">
+    <div class="form">
+      <form class="register-form" action="https://anoranzas-chaquenas.000webhostapp.com/userAPI.php" method="post">
+        <input id="newUser" type="text" placeholder="usuario" pattern="[a-zA-Z0-9_\-.]{3,}"/>
+        <p id="newUserError" class="error">Debe ingresar al menos 3 caracteres</p>
+        <input id="newPassword" type="password" placeholder="contraseña" pattern="[a-zA-Z0-9.]{8,}"/>
+        <p id="newPasswordError" class="error">Debe ingresar al menos 8 caracteres</p>
+        <input id="newEmail" type="text" placeholder="email" pattern="[a-zA-Z0-9._/-]{3,16}@(yahoo|hotmail|gmail){1}.com"/>
+        <p id="newEmailError" class="error">Debe ingresar un email en formato válido</p>
+        <input id="registerSubmit" type="submit" value="Crear" disabled>
+        <p class="message">¿Ya estás registrado? <a href="">Ingresar</a></p>
+      </form>
+      <form class="login-form" action="https://anoranzas-chaquenas.000webhostapp.com/userAPI.php" method="post">
+        <input id="user" type="text" placeholder="usuario" pattern="[a-zA-Z0-9_\-.]{3,}"/>
+        <p id="userError" class="error">Debe ingresar al menos 3 caracteres</p>
+        <input id="password" type="password" placeholder="contraseña" pattern="[a-zA-Z0-9.]{8,}"/>
+        <p id="passwordError" class="error">Debe ingresar al menos 8 caracteres</p>
+        <input id="loginSubmit" type="submit" value="Ingresar" disabled>
+        <p class="message">¿No te has registrado? <a href="">Crear una cuenta</a></p>
+      </form>
+    </div>
+  </div>
+</div>
